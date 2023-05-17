@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Martian Odyssey</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Card -->
+    <div id="card">
+        <a class="boxclose" id="boxclose"></a>
+        <h1>Martian Odyssey</h1>
+        <p>The quiet stillness of space envelops us as we make our way to the mysterious landscape of the fourth planet on our mysterious journey. Against all odds, we venture forth into the unknown, driven by an quest for knowledge and discovery on the lonely journey to the red planet.</p>
+    </div>
+
+    <!-- Backdrop -->
+    <div id="backdrop">
+        <div id="stars">
+            <div id="button"> 
+                <a href="" id="showcard"><img src="img/satellite.png" /></a> 
+            </div>
+        </div>
+
+        <!-- Mars -->
+        <div>
+            <img id="mars" src="img/mars.png">
+        </div>
+    </div>
+
+    <!-- Scripts for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- jQuery Request -->  
+    <script>                                         
+                $(document).ready(function() {
+                    
+                $("#showcard").click(function() {
+                    $("div#card").css("z-index", "100");
+                    $("div#card").addClass("show");
+                    return false;
+                });
+                
+                $("#boxclose").click(function() {
+                    $("div#card").css("z-index", "-1");
+                    $("div#card").removeClass("show");
+                    
+                    return false;
+                });
+                });                            
+    </script>
+</body>
+
+</html>
